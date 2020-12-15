@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { SidebarContext } from './shared/contexts/sidebarContext';
+import Home from './Home';
+import Menu from './Menu';
+import Product from './Product';
+import About from './About';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SidebarContext.Provider
+      value={{
+        isOpen: isOpen,
+        toggle: toggle,
+      }}
+    >
+      <BrowserRouter>
+        <Switch>
+          <Route path="/about" exact component={About} />
+          <Route path="/menu" exact component={Menu} />
+          <Route path="/menu/:prodId" exact component={Product} />
+          <Route path="/" exact component={Home} />
+          <Redirect to="/" />
+        </Switch>
+      </BrowserRouter>
+    </SidebarContext.Provider>
   );
 }
 
