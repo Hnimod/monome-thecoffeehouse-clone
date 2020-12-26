@@ -3,7 +3,6 @@ import { appColor } from '../../appConfig';
 import { Link } from 'react-router-dom';
 
 export const Section = styled.section`
-  max-width: 1800px;
   background: #333;
 `;
 

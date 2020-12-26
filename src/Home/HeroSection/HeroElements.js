@@ -4,7 +4,6 @@ import heroImg from '../../assets/images/hero.jpg';
 export const Section = styled.section`
   background: #fff;
   height: 100vh;
-  max-width: 1800px;
 `;
 
 export const Container = styled.div`

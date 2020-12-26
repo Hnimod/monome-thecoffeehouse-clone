@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 
 export const Footer = styled.footer`
-  max-width: 1800px;
   background: #000;
   color: #fff;
 `;

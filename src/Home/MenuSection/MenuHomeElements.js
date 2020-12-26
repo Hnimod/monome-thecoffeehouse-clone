@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  max-width: 1800px;
   background: #f5f5f5;
 `;
 
