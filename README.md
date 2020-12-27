@@ -2,7 +2,7 @@
 
 Front end copy of thecoffeehouse.com
 
-https://monome-thecoffeehouse-clone.web.app/
+Demo: https://monome-thecoffeehouse-clone.web.app/
 
 <br/>
 
